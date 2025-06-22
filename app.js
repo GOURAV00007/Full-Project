@@ -128,7 +128,9 @@ app.use((req,res,next)=>{
 //     let registerUser = await User.register(fakeUser , "helloWorld");
 //     res.send(registerUser);
 // })
-
+app.get("/",(req,res)=>{
+    console.log("hii");
+})
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
